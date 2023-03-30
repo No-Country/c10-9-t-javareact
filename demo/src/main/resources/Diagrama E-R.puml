@@ -1,0 +1,70 @@
+@startuml
+
+class Alumno {
+  * id: long
+  --
+  dni: string
+  nombre: string
+  apellido: string
+  email: string
+  plataforma_de_estudio: string
+  password: string
+
+  {constructor} Alumno(dni: string, nombre: string, apellido: string, email: string, password: string)
+}
+
+class Pais {
+  * id: int
+  --
+  nombre: string
+}
+
+class Tecnologia {
+  * id: int
+  --
+  nombre_tecnologia: string
+}
+
+class Proyecto {
+  * id: long
+  --
+  titulo: string
+  descripcion: string
+  --
+  autor_id: long
+
+  {constructor} Proyecto(titulo: string, descripcion: string, autor_id: int)
+}
+
+class "Area de Interés" {
+  * id: int
+  --
+  nombre: string
+}
+
+class "Grupo Proyecto" {
+  * id: int
+  --
+  nombre: string
+  --
+  proyecto_id: int
+  creador_id: int
+
+  {constructor} "Grupo Proyecto"(nombre: string, proyecto_id: int, creador_id: int)
+}
+
+interface Filtro {
+  * id: int
+  --
+  nombre: string
+}
+
+
+Alumno }|..|| Pais
+Alumno }o--o{ Tecnologia
+Alumno }o--o{ "Grupo Proyecto"
+Alumno }o--o{ Proyecto
+Proyecto }o--o{ "Area de Interés"
+"Grupo Proyecto" }o--o{ Filtro
+
+@enduml

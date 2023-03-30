@@ -1,0 +1,50 @@
+Este diagrama entidad-relación representa una estructura de datos para una aplicación web que
+permite a los estudiantes buscar y conectarse con otros estudiantes, así como crear proyectos
+colaborativos y unirse a grupos de proyectos existentes. A continuación, comento línea por línea la
+lógica implementada en el diagrama:
+
+
+- La primera entidad es Estudiante, que tiene atributos como id, dni, nombre, apellido, email y password.
+Esta entidad representa a los estudiantes que se registran en la aplicación. (Cada atributo con su
+correspondiente tipo de dato).
+* El constructor {constructor} Estudiante(dni, nombre, apellido, email, password) se utiliza para
+crear un nuevo objeto de la clase Estudiante. Este constructor tiene como parámetros los valores que
+se deben asignar a las propiedades dni, nombre, apellido, email y password del objeto. Al llamar a
+este constructor se crea un objeto de la clase Estudiante con las propiedades inicializadas con los
+valores de los parámetros.
+
+- La entidad Pais tiene solo un atributo llamado nombre y se relaciona con la entidad Estudiante
+mediante una relación de uno a muchos, es decir, un país puede tener muchos estudiantes registrados.
+
+- La entidad Tecnologia tiene un solo atributo llamado nombre_tecnologia y se relaciona con la entidad
+Estudiante mediante una relación de muchos a muchos, es decir, un estudiante puede tener varias
+tecnologías y una tecnología puede ser utilizada por varios estudiantes.
+
+- La entidad Proyecto tiene atributos como id, titulo, descripcion y autor_id. Esta entidad representa
+los proyectos creados por los estudiantes.
+* El constructor {constructor} Proyecto(titulo, descripcion, autor_id) se utiliza para crear un nuevo
+objeto de la clase Proyecto. Este constructor tiene como parámetros los valores que se deben asignar
+a las propiedades titulo, descripcion y autor_id del objeto. Al llamar a este constructor se crea un
+objeto de la clase Proyecto con las propiedades inicializadas con los valores de los parámetros.
+
+- La entidad "Area de Interés" tiene un solo atributo llamado nombre y se relaciona con la entidad
+Proyecto mediante una relación de muchos a muchos, es decir, un proyecto puede tener varias áreas de
+interés y una área de interés puede estar relacionada con varios proyectos.
+
+- La entidad "Grupo Proyecto" tiene atributos como id, nombre, proyecto_id y creador_id. Esta entidad
+representa los grupos de proyectos creados por los estudiantes y se relaciona con la entidad
+Estudiante mediante una relación de muchos a muchos.
+* El constructor {constructor} "Grupo Proyecto"(nombre, proyecto_id, creador_id) se utiliza para
+crear un nuevo objeto de la clase "Grupo Proyecto". Este constructor tiene como parámetros los
+valores que se deben asignar a las propiedades nombre, proyecto_id y creador_id del objeto. Al llamar
+a este constructor se crea un objeto de la clase "Grupo Proyecto" con las propiedades inicializadas
+con los valores de los parámetros.
+
+- La entidad Filtro tiene un solo atributo llamado nombre y se relaciona con la entidad "Grupo
+Proyecto" mediante una relación de uno a muchos, es decir, un filtro puede estar relacionado con
+muchos grupos de proyectos.
+
+- Las relaciones entre las entidades se definen mediante líneas y símbolos especiales. Por ejemplo,
+el símbolo "--" indica una relación de uno a muchos y el símbolo "o--o" indica una relación de muchos
+a muchos. Las relaciones entre las entidades se describen en la parte inferior del diagrama, donde se
+indica el tipo de relación y las entidades involucradas.
