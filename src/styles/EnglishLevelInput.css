@@ -1,0 +1,26 @@
+.button-group {
+  display: flex;
+  gap: 10px;
+}
+
+.button {
+  background-color: gray;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.2s ease-in-out;
+}
+
+.button:hover {
+  background-color: #7f7f7f;
+}
+
+.selected {
+  background-color: purple;
+}
+
+.selected:hover {
+  background-color: #a56de2;
+}

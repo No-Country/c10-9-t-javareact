@@ -1,10 +1,9 @@
+import React from 'react'
+import ProfessionalDescriptionInput from '../components/ProfessionalDescriptionInput'
 
-function App() {
+function App () {
   return (
-    <div className="App">
-      <l1>it's working</l1>
-        
-    </div>
+    <ProfessionalDescriptionInput />
   )
 }
 
