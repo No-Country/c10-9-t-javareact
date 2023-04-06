@@ -18,5 +18,7 @@ public class Proyecto {
     private String titulo;
     private String descripcion;
     private Long autorId;
+
+
 }
 
