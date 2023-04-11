@@ -5,14 +5,16 @@ import exception.AttributeException;
 import exception.ResourceNotFoundException;
 import lombok.RequiredArgsConstructor;
 import model.dto.ImageDto;
+import model.dto.request.ProjectRequest;
+import model.dto.request.TeamRequest;
 import model.dto.response.ProjectCardResponse;
 import model.dto.response.ProjectResponse;
 import model.entity.Project;
+import org.apache.catalina.User;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.MediaType;
 import org.springframework.http.ResponseEntity;
 import org.springframework.security.core.Authentication;
-import org.springframework.security.core.userdetails.User;
 import org.springframework.security.core.userdetails.UsernameNotFoundException;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.multipart.MultipartFile;
@@ -72,7 +74,7 @@ public class ProjectController {
                                                           @RequestPart(name = "file") MultipartFile image) throws ResourceNotFoundException, AttributeException {
 
         Set<User> team = new HashSet<>();
-        User user = userService.getUserByEmail(authentication.getName());
+        security.model.entity.User user = userService.getUserByEmail(authentication.getName());
         team.add(user);
 
         Image imageDB = null;
@@ -110,7 +112,7 @@ public class ProjectController {
         if(request.getTeam().length == 0)
             throw new AttributeException("The array cant be empty");
 
-        User user = userService.getUserByEmail(authentication.getName());
+        security.model.entity.User user = userService.getUserByEmail(authentication.getName());
         ProjectResponse projectResponse = projectService.getProject(id);
 
         Optional<Project> ownProject = user.getProjects().stream()

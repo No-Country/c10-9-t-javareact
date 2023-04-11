@@ -7,6 +7,7 @@ import com.fourjuniors.juniors.security.model.dto.request.LoginUserRequest;
 import com.fourjuniors.juniors.security.model.dto.response.CreateUserResponse;
 import com.fourjuniors.juniors.security.model.dto.response.LoginUserResponse;
 import com.fourjuniors.juniors.security.model.entity.User;
+import security.model.entity.User;
 
 public interface UserService {
     CreateUserResponse create(CreateUserRequest request) throws AttributeException;

@@ -1,10 +1,10 @@
 package service.implementation;
 
-import com.fourjuniors.juniors.model.dto.ImageDto;
-import com.fourjuniors.juniors.model.entity.Image;
-import com.fourjuniors.juniors.repository.ImageRepository;
-import com.fourjuniors.juniors.service.ImageService;
+import model.dto.ImageDto;
+import model.entity.Image;
 import org.springframework.stereotype.Service;
+import repository.ImageRepository;
+import service.ImageService;
 
 @Service
 public class ImageServiceImpl implements ImageService {

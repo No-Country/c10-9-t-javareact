@@ -1,12 +1,6 @@
 package mapper;
 
-import com.fourjuniors.juniors.model.dto.StackDto;
-import com.fourjuniors.juniors.model.dto.request.ProjectRequest;
-import com.fourjuniors.juniors.model.dto.response.ProjectResponse;
-import com.fourjuniors.juniors.model.dto.response.UserInfoResponse;
-import com.fourjuniors.juniors.model.entity.Image;
-import com.fourjuniors.juniors.model.entity.Project;
-import com.fourjuniors.juniors.security.model.entity.User;
+
 import model.dto.StackDto;
 import model.dto.request.ProjectRequest;
 import model.dto.response.ProjectResponse;

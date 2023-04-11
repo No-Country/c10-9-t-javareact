@@ -1,16 +1,15 @@
 package security.controller;
 
-import com.fourjuniors.juniors.exception.AttributeException;
-import com.fourjuniors.juniors.security.model.dto.request.CreateUserRequest;
-import com.fourjuniors.juniors.security.model.dto.request.LoginUserRequest;
-import com.fourjuniors.juniors.security.model.dto.response.CreateUserResponse;
-import com.fourjuniors.juniors.security.model.dto.response.LoginUserResponse;
-import com.fourjuniors.juniors.security.service.implementation.UserServiceImpl;
+
+import jakarta.validation.Valid;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
+import security.model.dto.response.CreateUserResponse;
+import security.model.dto.response.LoginUserResponse;
+import security.service.implementation.UserServiceImpl;
 
-import javax.validation.Valid;
+
 
 @RestController
 @RequestMapping("/auth")

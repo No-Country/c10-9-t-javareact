@@ -1,9 +1,11 @@
 package service;
 
-import com.fourjuniors.juniors.model.dto.ImageDto;
-import com.fourjuniors.juniors.model.entity.Image;
+import model.dto.ImageDto;
+import model.entity.Image;
 
 public interface ImageService {
+
+    Image saveImage(ImageDto request);
 
     Image saveImage(ImageDto request);
 }

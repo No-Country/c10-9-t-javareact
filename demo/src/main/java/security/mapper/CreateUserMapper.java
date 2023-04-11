@@ -1,8 +1,6 @@
 package security.mapper;
 
-import com.fourjuniors.juniors.security.model.dto.request.CreateUserRequest;
-import com.fourjuniors.juniors.security.model.dto.response.CreateUserResponse;
-import com.fourjuniors.juniors.security.model.entity.User;
+
 import security.model.dto.request.CreateUserRequest;
 import security.model.dto.response.CreateUserResponse;
 import security.model.entity.User;

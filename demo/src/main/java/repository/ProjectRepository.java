@@ -1,6 +1,6 @@
 package repository;
 
-import com.fourjuniors.juniors.model.entity.Project;
+import model.entity.Project;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 

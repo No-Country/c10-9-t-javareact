@@ -1,6 +1,7 @@
 package repository;
 
-import com.fourjuniors.juniors.model.entity.Rating;
+
+import model.entity.Rating;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.jpa.repository.Query;
 import org.springframework.stereotype.Repository;

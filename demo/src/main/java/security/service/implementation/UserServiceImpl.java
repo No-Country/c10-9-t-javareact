@@ -71,7 +71,7 @@ public class UserServiceImpl implements UserService {
     }
 
     @Override
-    public User getUserByEmail(String email) throws ResourceNotFoundException {
+    public security.model.entity.User getUserByEmail(String email) throws ResourceNotFoundException {
         return userRepository.findByEmail(email)
                 .orElseThrow(() -> new ResourceNotFoundException("user does not exist"));
     }

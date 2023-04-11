@@ -1,8 +1,6 @@
 package security.config;
 
-import com.fourjuniors.juniors.security.jwt.JwtEntryPoint;
-import com.fourjuniors.juniors.security.jwt.JwtFilter;
-import com.fourjuniors.juniors.security.service.implementation.UserDetailsServiceImpl;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
@@ -14,6 +12,9 @@ import org.springframework.security.config.http.SessionCreationPolicy;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.security.web.SecurityFilterChain;
 import org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter;
+import security.jwt.JwtEntryPoint;
+import security.jwt.JwtFilter;
+import security.service.implementation.UserDetailsServiceImpl;
 
 import static org.springframework.http.HttpMethod.GET;
 

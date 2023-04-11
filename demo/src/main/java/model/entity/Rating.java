@@ -1,10 +1,10 @@
 package model.entity;
-
-import com.fourjuniors.juniors.model.enums.RatingEnum;
-import com.fourjuniors.juniors.security.model.entity.User;
+import jakarta.persistence.*;
 import lombok.*;
+import model.enums.RatingEnum;
+import security.model.entity.User;
 
-import javax.persistence.*;
+
 
 @Entity
 @NoArgsConstructor @AllArgsConstructor

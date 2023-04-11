@@ -1,19 +1,15 @@
 package controller;
 
-import com.fourjuniors.juniors.exception.AttributeException;
-import com.fourjuniors.juniors.exception.ResourceNotFoundException;
-import com.fourjuniors.juniors.model.dto.request.RatingRequest;
-import com.fourjuniors.juniors.security.model.entity.User;
-import com.fourjuniors.juniors.security.service.UserService;
-import com.fourjuniors.juniors.service.RatingService;
+
 import exception.AttributeException;
 import exception.ResourceNotFoundException;
 import lombok.RequiredArgsConstructor;
-import org.apache.catalina.User;
+import model.dto.request.RatingRequest;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.security.core.Authentication;
 import org.springframework.web.bind.annotation.*;
+import security.model.entity.User;
 import security.service.UserService;
 import service.RatingService;
 
