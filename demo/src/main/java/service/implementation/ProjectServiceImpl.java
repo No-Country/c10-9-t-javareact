@@ -4,7 +4,6 @@ package service.implementation;
 import exception.ResourceNotFoundException;
 import mapper.ProjectCardMapper;
 import mapper.ProjectMapper;
-import model.dto.request.ProjectRequest;
 import model.dto.response.ProjectCardResponse;
 import model.dto.response.ProjectResponse;
 import model.entity.Project;
@@ -12,13 +11,12 @@ import model.entity.Rating;
 import org.springframework.stereotype.Service;
 import repository.ImageRepository;
 import repository.ProjectRepository;
-import repository.RatingRepository;
+import security.jwt.RatingRepository;
 import security.model.entity.User;
 import security.repository.UserRepository;
 import service.ProjectService;
 import utils.RatingUtils;
 
-import java.awt.*;
 import java.util.*;
 import java.util.List;
 import java.util.stream.Collectors;
@@ -101,22 +99,6 @@ public abstract class ProjectServiceImpl implements ProjectService {
         double ratingValue = RatingUtils.getAverageValue(ratingList);
         return ProjectMapper.mapToDto(projectDB, teamDB, ratingValue);
 
-    }
-
-    @Override
-    public ProjectResponse createProject(ProjectRequest projectRequest, Set<User> team, Image image) {
-
-        Image imageInserted = imageRepo.save(image);
-
-        Project project = ProjectMapper.mapToEntity(projectRequest, imageInserted);
-        Project projectInserted = projectRepo.save(project);
-
-        team.forEach(user -> {
-            user.getProjects().add(projectInserted);
-            userRepo.save(user);
-        });
-
-        return ProjectMapper.mapToDto(projectInserted, team, 0.0);
     }
 
     @Override

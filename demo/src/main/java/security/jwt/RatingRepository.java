@@ -1,4 +1,4 @@
-package repository;
+package security.jwt;
 
 
 import model.entity.Rating;

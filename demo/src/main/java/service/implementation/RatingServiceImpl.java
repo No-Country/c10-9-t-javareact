@@ -9,7 +9,7 @@ import model.entity.Rating;
 import model.enums.RatingEnum;
 import org.springframework.stereotype.Service;
 import repository.ProjectRepository;
-import repository.RatingRepository;
+import security.jwt.RatingRepository;
 import security.model.entity.User;
 import service.RatingService;
 import utils.RatingUtils;

@@ -3,6 +3,7 @@ package security.controller;
 
 import exception.AttributeException;
 
+import jakarta.validation.Valid;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
@@ -12,7 +13,7 @@ import security.model.dto.response.CreateUserResponse;
 import security.model.dto.response.LoginUserResponse;
 import security.service.implementation.UserServiceImpl;
 
-import javax.validation.Valid;
+
 
 
 @RestController
