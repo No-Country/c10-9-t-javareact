@@ -1,9 +1,11 @@
 package security.model.entity;
 
-import com.fourjuniors.juniors.security.model.enums.RoleEnum;
-import lombok.*;
 
-import javax.persistence.*;
+import jakarta.persistence.*;
+import lombok.*;
+import security.model.enums.RoleEnum;
+
+
 
 @Entity
 @Getter @Setter

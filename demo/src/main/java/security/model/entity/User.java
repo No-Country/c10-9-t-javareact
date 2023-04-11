@@ -1,9 +1,11 @@
 package security.model.entity;
 
-import com.fourjuniors.juniors.model.entity.Project;
-import lombok.*;
 
-import javax.persistence.*;
+import jakarta.persistence.*;
+import lombok.*;
+import model.entity.Project;
+
+
 import java.util.HashSet;
 import java.util.Set;
 

@@ -1,9 +1,10 @@
 package security.repository;
 
-import com.fourjuniors.juniors.security.model.entity.Role;
-import com.fourjuniors.juniors.security.model.enums.RoleEnum;
+
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
+import security.model.entity.Role;
+import security.model.enums.RoleEnum;
 
 import java.util.Optional;
 

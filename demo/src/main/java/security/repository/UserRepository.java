@@ -1,9 +1,10 @@
 package security.repository;
 
-import com.fourjuniors.juniors.security.model.entity.User;
+
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.jpa.repository.Query;
 import org.springframework.stereotype.Repository;
+import security.model.entity.User;
 
 import java.util.Optional;
 import java.util.Set;
