@@ -3,7 +3,6 @@ package security.service.implementation;
 
 import exception.AttributeException;
 import exception.ResourceNotFoundException;
-import org.apache.catalina.User;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.authentication.AuthenticationManager;
 import org.springframework.security.authentication.UsernamePasswordAuthenticationToken;
@@ -18,6 +17,7 @@ import security.model.dto.request.LoginUserRequest;
 import security.model.dto.response.CreateUserResponse;
 import security.model.dto.response.LoginUserResponse;
 import security.model.entity.Role;
+import security.model.entity.User;
 import security.model.enums.RoleEnum;
 import security.repository.RoleRepository;
 import security.repository.UserRepository;
@@ -45,7 +45,7 @@ public class UserServiceImpl implements UserService {
 
         String password = passwordEncoder.encode(request.getPassword());
 
-        User user = CreateUserMapper.mapToEntity(request, password);
+        security.model.entity.User user = CreateUserMapper.mapToEntity(request, password);
 
         try {
             Role userRole = roleRepository.findByName(RoleEnum.ROLE_USER)

@@ -1,17 +1,17 @@
 package service.implementation;
 
-import com.fourjuniors.juniors.exception.AttributeException;
-import com.fourjuniors.juniors.exception.ResourceNotFoundException;
-import com.fourjuniors.juniors.model.dto.request.RatingRequest;
-import com.fourjuniors.juniors.model.entity.Project;
-import com.fourjuniors.juniors.model.entity.Rating;
-import com.fourjuniors.juniors.model.enums.RatingEnum;
-import com.fourjuniors.juniors.repository.ProjectRepository;
-import com.fourjuniors.juniors.repository.RatingRepository;
-import com.fourjuniors.juniors.security.model.entity.User;
-import com.fourjuniors.juniors.service.RatingService;
-import com.fourjuniors.juniors.utils.RatingUtils;
+
+import exception.AttributeException;
+import exception.ResourceNotFoundException;
+import model.dto.request.RatingRequest;
+import model.entity.Project;
+import model.entity.Rating;
+import model.enums.RatingEnum;
 import org.springframework.stereotype.Service;
+import repository.ProjectRepository;
+import repository.RatingRepository;
+import security.model.entity.User;
+import service.RatingService;
 
 import java.util.Optional;
 

@@ -90,7 +90,7 @@ public class ProjectServiceImpl implements ProjectService {
         Project projectDB = projectRepo.findById(id)
                 .orElseThrow(() -> new ResourceNotFoundException("project does not exist"));
 
-        Set<User> teamDB = userRepo.findAllByProjectId(id);
+        Set<security.model.entity.User> teamDB = userRepo.findAllByProjectId(id);
 
         Set<Rating> ratingList = ratingRepo.findAllByProjectId(id);
 

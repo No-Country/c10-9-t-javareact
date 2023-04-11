@@ -1,6 +1,7 @@
-import com.fourjuniors.juniors.exception.AttributeException;
-import com.fourjuniors.juniors.model.entity.Rating;
-import com.fourjuniors.juniors.model.enums.RatingEnum;
+
+import exception.AttributeException;
+import model.entity.Rating;
+import model.enums.RatingEnum;
 
 import java.util.Set;
 

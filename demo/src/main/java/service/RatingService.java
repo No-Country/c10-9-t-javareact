@@ -1,9 +1,10 @@
 package service;
 
-import com.fourjuniors.juniors.exception.AttributeException;
-import com.fourjuniors.juniors.exception.ResourceNotFoundException;
-import com.fourjuniors.juniors.model.dto.request.RatingRequest;
-import com.fourjuniors.juniors.security.model.entity.User;
+
+import exception.AttributeException;
+import exception.ResourceNotFoundException;
+import model.dto.request.RatingRequest;
+import security.model.entity.User;
 
 public interface RatingService {
 

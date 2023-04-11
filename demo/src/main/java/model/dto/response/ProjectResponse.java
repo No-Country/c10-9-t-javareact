@@ -1,7 +1,8 @@
 package model.dto.response;
 
-import com.fourjuniors.juniors.model.dto.StackDto;
+
 import lombok.*;
+import model.dto.StackDto;
 
 import java.util.Set;
 

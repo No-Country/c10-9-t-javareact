@@ -7,5 +7,5 @@ public interface ImageService {
 
     Image saveImage(ImageDto request);
 
-    Image saveImage(ImageDto request);
+
 }

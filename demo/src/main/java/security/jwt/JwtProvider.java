@@ -1,6 +1,12 @@
 package security.jwt;
 
 
+import io.jsonwebtoken.ExpiredJwtException;
+import io.jsonwebtoken.Jwts;
+import io.jsonwebtoken.MalformedJwtException;
+import io.jsonwebtoken.UnsupportedJwtException;
+import io.jsonwebtoken.io.Decoders;
+import io.jsonwebtoken.security.Keys;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Value;
@@ -10,6 +16,7 @@ import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.stereotype.Component;
 
 import java.security.Key;
+import java.security.SignatureException;
 import java.util.Date;
 import java.util.List;
 import java.util.stream.Collectors;
@@ -59,8 +66,6 @@ public class JwtProvider {
             logger.error("unsupported token");
         } catch (MalformedJwtException e) {
             logger.error("malformed token");
-        } catch (SignatureException e) {
-            logger.error("bad signature");
         } catch (IllegalArgumentException e) {
             e.printStackTrace();
         } catch (Exception e) {

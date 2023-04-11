@@ -10,7 +10,6 @@ import model.dto.request.TeamRequest;
 import model.dto.response.ProjectCardResponse;
 import model.dto.response.ProjectResponse;
 import model.entity.Project;
-import org.apache.catalina.User;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.MediaType;
 import org.springframework.http.ResponseEntity;
@@ -18,6 +17,7 @@ import org.springframework.security.core.Authentication;
 import org.springframework.security.core.userdetails.UsernameNotFoundException;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.multipart.MultipartFile;
+import security.model.entity.User;
 import security.service.UserService;
 import service.ImageService;
 import service.ProjectService;
@@ -73,9 +73,9 @@ public class ProjectController {
                                                           @RequestPart(name = "project") ProjectRequest request,
                                                           @RequestPart(name = "file") MultipartFile image) throws ResourceNotFoundException, AttributeException {
 
-        Set<User> team = new HashSet<>();
+        Set<org.apache.catalina.User> team = new HashSet<>();
         security.model.entity.User user = userService.getUserByEmail(authentication.getName());
-        team.add(user);
+        team.add((org.apache.catalina.User) user);
 
         Image imageDB = null;
         if (image.getContentType().equals("image/webp") || image.getContentType().equals("image/jpg")
@@ -133,7 +133,7 @@ public class ProjectController {
                 })
                 .collect(Collectors.toSet());
 
-        ProjectResponse response = projectService.addMembersToTeam(team, ownProject.get());
+        ProjectResponse response = projectService.addMembersToTeam( team,ownProject.get());
 
         return new ResponseEntity<>(response, HttpStatus.OK);
     }

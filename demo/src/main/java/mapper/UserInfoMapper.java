@@ -2,7 +2,7 @@ package mapper;
 
 
 import model.dto.response.UserInfoResponse;
-import org.apache.catalina.User;
+import security.model.entity.User;
 
 public class UserInfoMapper {
 

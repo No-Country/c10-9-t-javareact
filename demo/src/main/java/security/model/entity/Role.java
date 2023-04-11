@@ -1,10 +1,11 @@
 package security.model.entity;
 
 
-import jakarta.persistence.*;
+
 import lombok.*;
 import security.model.enums.RoleEnum;
 
+import javax.persistence.*;
 
 
 @Entity

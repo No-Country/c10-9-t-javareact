@@ -1,8 +1,13 @@
 package model.entity;
 
 
-import jakarta.persistence.*;
+
 import lombok.*;
+
+import javax.persistence.*;
+import java.awt.*;
+import java.awt.image.ImageObserver;
+import java.awt.image.ImageProducer;
 
 
 @Entity
@@ -10,7 +15,7 @@ import lombok.*;
 @Getter @Setter
 @Builder
 @Table(name = "image")
-public class Image {
+public class Image extends java.awt.Image {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
@@ -18,4 +23,28 @@ public class Image {
     private String path;
     private String keyBucket;
 
+    @Override
+    public int getWidth(ImageObserver observer) {
+        return 0;
+    }
+
+    @Override
+    public int getHeight(ImageObserver observer) {
+        return 0;
+    }
+
+    @Override
+    public ImageProducer getSource() {
+        return null;
+    }
+
+    @Override
+    public Graphics getGraphics() {
+        return null;
+    }
+
+    @Override
+    public Object getProperty(String name, ImageObserver observer) {
+        return null;
+    }
 }

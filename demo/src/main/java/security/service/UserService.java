@@ -1,12 +1,11 @@
 package security.service;
 
-import com.fourjuniors.juniors.exception.AttributeException;
-import com.fourjuniors.juniors.exception.ResourceNotFoundException;
-import com.fourjuniors.juniors.security.model.dto.request.CreateUserRequest;
-import com.fourjuniors.juniors.security.model.dto.request.LoginUserRequest;
-import com.fourjuniors.juniors.security.model.dto.response.CreateUserResponse;
-import com.fourjuniors.juniors.security.model.dto.response.LoginUserResponse;
-import com.fourjuniors.juniors.security.model.entity.User;
+import exception.AttributeException;
+import exception.ResourceNotFoundException;
+import security.model.dto.request.CreateUserRequest;
+import security.model.dto.request.LoginUserRequest;
+import security.model.dto.response.CreateUserResponse;
+import security.model.dto.response.LoginUserResponse;
 import security.model.entity.User;
 
 public interface UserService {

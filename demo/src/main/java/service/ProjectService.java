@@ -23,5 +23,5 @@ public interface ProjectService {
 
     void deleteProject(Long id);
 
-    ProjectResponse addMembersToTeam(Set<User> team, Project project);
+    ProjectResponse addMembersToTeam(Set<security.model.entity.User> team, Project project);
 }

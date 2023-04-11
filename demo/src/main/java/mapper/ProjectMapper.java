@@ -6,7 +6,7 @@ import model.dto.request.ProjectRequest;
 import model.dto.response.ProjectResponse;
 import model.dto.response.UserInfoResponse;
 import model.entity.Project;
-import org.apache.catalina.User;
+import security.model.entity.User;
 
 import java.awt.*;
 import java.util.Set;
@@ -51,7 +51,7 @@ public class ProjectMapper {
                         request.getStack().getTech2()))
                 .description(request.getDescription())
                 .link(request.getLink())
-                .image(image)
+                .image((model.entity.Image) image)
                 .build();
     }
 }
