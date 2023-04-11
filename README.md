@@ -28,4 +28,4 @@ Si quieres correr este proyecto de forma local debes seguir los siguientes pasos
 
 ## Equipo de Trabajo :
 * Ever Jose Rojas Perez ***Front-end Developer***
-* German  Pistan ***Back-end Developer***
+* Anibal German  Pistan ***Back-end Developer***
