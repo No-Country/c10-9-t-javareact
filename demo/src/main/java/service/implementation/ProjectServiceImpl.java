@@ -9,21 +9,22 @@ import model.dto.response.ProjectCardResponse;
 import model.dto.response.ProjectResponse;
 import model.entity.Project;
 import model.entity.Rating;
-import org.apache.catalina.User;
 import org.springframework.stereotype.Service;
 import repository.ImageRepository;
 import repository.ProjectRepository;
 import repository.RatingRepository;
+import security.model.entity.User;
 import security.repository.UserRepository;
 import service.ProjectService;
+import utils.RatingUtils;
 
 import java.awt.*;
+import java.util.*;
 import java.util.List;
-import java.util.Set;
 import java.util.stream.Collectors;
 
 @Service
-public class ProjectServiceImpl implements ProjectService {
+public abstract class ProjectServiceImpl implements ProjectService {
 
     private final ProjectRepository projectRepo;
 
@@ -90,7 +91,7 @@ public class ProjectServiceImpl implements ProjectService {
         Project projectDB = projectRepo.findById(id)
                 .orElseThrow(() -> new ResourceNotFoundException("project does not exist"));
 
-        Set<security.model.entity.User> teamDB = userRepo.findAllByProjectId(id);
+        Set<User> teamDB = userRepo.findAllByProjectId(id);
 
         Set<Rating> ratingList = ratingRepo.findAllByProjectId(id);
 

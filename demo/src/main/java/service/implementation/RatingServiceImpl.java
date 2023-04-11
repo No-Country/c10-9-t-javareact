@@ -12,6 +12,7 @@ import repository.ProjectRepository;
 import repository.RatingRepository;
 import security.model.entity.User;
 import service.RatingService;
+import utils.RatingUtils;
 
 import java.util.Optional;
 
