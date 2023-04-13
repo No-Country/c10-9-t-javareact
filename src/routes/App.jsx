@@ -1,24 +1,22 @@
 import React from 'react'
-import Contact from '../components/ContactInfoInput'
-import GenderComponent from '../components/GenderComponent'
-import TechnologyListInput from '../components/TechnologyListInput'
-import PhoneNumber from '../components/PhoneNumber'
-import DateOfBirth from '../components/DateOfBirthInput'
-import EnglishLevel from '../components/EnglishLevelInput'
-import ProffesionalDescription from '../components/ProfessionalDescriptionInput'
-import ProfessionalLevel from '../components/ProfessionalLevelInput'
+import { Routes, Route } from 'react-router-dom'
+import Login from '../pages/Login'
+import CreateAccount from '../pages/CreateAccount'
+import PasswordRecovery from '../pages/PasswordRecovery'
+import NewPassword from '../pages/NewPassword'
+import Form from '../pages/Form'
+import Home from '../pages/Home'
 function App () {
   return (
     <>
-      <GenderComponent />
-      <Contact />
-      <PhoneNumber />
-      <DateOfBirth />
-      <EnglishLevel />
-      <ProffesionalDescription />
-      <TechnologyListInput />
-      <ProfessionalLevel />
-
+      <Routes>
+        <Route path='/' element={<Login />} />
+        <Route path='/createaccount' element={<CreateAccount />} />
+        <Route path='/passwordrecovery' element={<PasswordRecovery />} />
+        <Route path='/newpassword' element={<NewPassword />} />
+        <Route path='/form' element={<Form />} />
+        <Route path='/home' element={<Home />} />
+      </Routes>
     </>
   )
 }

@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
 import '../styles/EnglishLevelInput.css'
 
-function ProfessionalLevelInput () {
+function ProfessionalLevelInput ({ onFormDataChange }) {
   const [selectedOption, setSelectedOption] = useState('')
 
   const options = [
@@ -13,11 +13,12 @@ function ProfessionalLevelInput () {
 
   const handleOptionClick = (option) => {
     setSelectedOption(option)
+    onFormDataChange('level', option)
   }
 
   return (
     <>
-      <h1>Nivel de ingles</h1>
+      <h1>Nivel Profesional</h1>
       <div className='button-group'>
         {options.map((option) => (
           <button
@@ -30,6 +31,9 @@ function ProfessionalLevelInput () {
           </button>
         ))}
       </div>
+      {selectedOption === '' && (
+        <p>por favor selecciona tu nivel profesional</p>
+      )}
     </>
   )
 }

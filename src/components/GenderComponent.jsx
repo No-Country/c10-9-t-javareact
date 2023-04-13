@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
 import '../styles/EnglishLevelInput.css'
 
-function GenderComponent () {
+function GenderComponent ({ onFormDataChange }) {
   const [selectedOption, setSelectedOption] = useState('')
 
   const options = [
@@ -12,11 +12,12 @@ function GenderComponent () {
 
   const handleOptionClick = (option) => {
     setSelectedOption(option)
+    onFormDataChange('gender', option)
   }
 
   return (
     <>
-      <h1>Nivel de ingles</h1>
+      <h1>Sexo</h1>
       <div className='button-group'>
         {options.map((option) => (
           <button
@@ -29,6 +30,9 @@ function GenderComponent () {
           </button>
         ))}
       </div>
+      {selectedOption === '' && (
+        <p>Por favor selecciona tu género</p>
+      )}
     </>
   )
 }

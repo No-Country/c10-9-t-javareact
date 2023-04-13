@@ -2,7 +2,7 @@ import React, { useState } from 'react'
 import TechnologySelector from '../containers/TechnologySelector'
 import SelectedTechnologies from '../containers/SelectedTechnologies'
 
-function TechnologyListInput () {
+function TechnologyListInput ({ onFormDataChange }) {
   const [showModal, setShowModal] = useState(false)
   const [selectedTechnologies, setSelectedTechnologies] = useState([])
   const [availableTech, setAvailableTech] = useState([
@@ -29,15 +29,19 @@ function TechnologyListInput () {
     setSelectedTechnologies([...selectedTechnologies, tech])
     setAvailableTech(availableTech.filter((availableTech) => availableTech !== tech))
     setShowModal(false)
+    onFormDataChange('selectedTechnologies', [...selectedTechnologies, tech])
+    setErrorMessage(null)
   }
 
   const handleTechRemove = (tech) => {
     setSelectedTechnologies(selectedTechnologies.filter((selectedTech) => selectedTech !== tech))
     setAvailableTech([...availableTech, tech])
+    onFormDataChange('selectedTechnologies', selectedTechnologies.filter((selectedTech) => selectedTech !== tech))
   }
 
   return (
     <div>
+      <h1>Sofware y tecnologia que usas</h1>
       <TechnologySelector
         showModal={showModal}
         availableTech={availableTech}

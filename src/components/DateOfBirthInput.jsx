@@ -1,10 +1,10 @@
-import React, { useState } from 'react'
+import React, { useState, useEffect } from 'react'
 
-function DateOfBirthInput () {
+function DateOfBirthInput ({ formData, onFormDataChange }) {
   // Initialize state for day, month, and year
-  const [day, setDay] = useState('')
-  const [month, setMonth] = useState('')
-  const [year, setYear] = useState('')
+  const [day, setDay] = useState(formData?.day || '')
+  const [month, setMonth] = useState(formData?.month || '')
+  const [year, setYear] = useState(formData?.year || '')
 
   // Define options for day, month, and year dropdowns
   const days = Array.from({ length: 31 }, (_, i) => i + 1)
@@ -34,6 +34,11 @@ function DateOfBirthInput () {
   const handleYearChange = (event) => {
     setYear(event.target.value)
   }
+
+  // Update parent form data when component state changes
+  useEffect(() => {
+    onFormDataChange({ ...formData, day, month, year })
+  }, [day, month, year])
 
   return (
     <>

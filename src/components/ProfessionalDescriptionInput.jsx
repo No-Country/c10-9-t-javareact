@@ -2,7 +2,7 @@ import React, { useState } from 'react'
 import JobSelector from '../containers/JobSelector'
 import SelectedJobs from '../containers/SelectedJobs'
 
-function ProfessionalDescriptionInput () {
+function ProfessionalDescriptionInput ({ onFormDataChange }) {
   const [showModal, setShowModal] = useState(false)
   const [selectedJobs, setSelectedJobs] = useState([])
   const [availableJobs, setAvailableJobs] = useState([
@@ -29,15 +29,19 @@ function ProfessionalDescriptionInput () {
     setSelectedJobs([...selectedJobs, job])
     setAvailableJobs(availableJobs.filter((availableJob) => availableJob !== job))
     setShowModal(false)
+    onFormDataChange('selectedJobs', [...selectedJobs, job])
+    setErrorMessage(null)
   }
 
   const handleJobRemove = (job) => {
     setSelectedJobs(selectedJobs.filter((selectedJob) => selectedJob !== job))
     setAvailableJobs([...availableJobs, job])
+    onFormDataChange('selectedJobs', selectedJobs.filter((selectedJob) => selectedJob !== job))
   }
 
   return (
     <div>
+      <h1>Descripcion profesional</h1>
       <JobSelector
         showModal={showModal}
         availableJobs={availableJobs}
