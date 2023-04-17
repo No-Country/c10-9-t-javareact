@@ -26,6 +26,11 @@ Si quieres correr este proyecto de forma local debes seguir los siguientes pasos
 * ***Spring*** (https://spring.io)
 * ***Sql*** (https://www.microsoft.com/es-es/sql-server/sql-server-downloads)
 
+## Las tecnologias de Diseño utilizadas fueron:
+* ***FIGMA*** (https://www.figma.com/)
+
+
 ## Equipo de Trabajo :
 * Ever Jose Rojas Perez ***Front-end Developer***
 * Anibal German  Pistan ***Back-end Developer***
+* Carolina Pineda ***UI Designer***
