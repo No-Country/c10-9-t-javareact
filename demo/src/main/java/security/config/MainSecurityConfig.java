@@ -43,17 +43,6 @@ public class MainSecurityConfig {
         http.authenticationManager(authenticationManager);
         http.csrf().disable();
         http.cors();
-        http.authorizeRequests()
-                .antMatchers(GET, "/test/allUsers").hasAnyAuthority("ROLE_USER", "ROLE_ADMIN")
-                .antMatchers(GET, "/test/onlyAdmin").hasAnyAuthority("ROLE_ADMIN")
-                .antMatchers(GET, "/api/projects").permitAll()
-                .antMatchers(GET, "/api/projects/*").permitAll()
-                .antMatchers(GET, "/api/topTen").permitAll()
-                .antMatchers("/auth/**").permitAll()
-                .antMatchers("/swagger-ui/**").permitAll()
-                .antMatchers("/swagger-resources/**").permitAll()
-                .antMatchers("/v3/api-docs").permitAll()
-                .anyRequest().authenticated();
         http.exceptionHandling().authenticationEntryPoint(jwtEntryPoint);
         http.sessionManagement().sessionCreationPolicy(SessionCreationPolicy.STATELESS);
         http.addFilterBefore(jwtFilter, UsernamePasswordAuthenticationFilter.class);

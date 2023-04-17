@@ -1,9 +1,8 @@
 package model.dto.request;
 
-import jakarta.validation.constraints.NotBlank;
 import lombok.*;
 
-
+import javax.validation.constraints.NotBlank;
 
 
 @Getter @Setter

@@ -1,11 +1,10 @@
 package model.entity;
 
-import jakarta.persistence.*;
 import lombok.*;
 import model.enums.RatingEnum;
 import security.model.entity.User;
 
-
+import javax.persistence.*;
 
 
 @Entity

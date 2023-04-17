@@ -1,13 +1,10 @@
 package security.model.entity;
 
-
-
-import jakarta.persistence.*;
 import lombok.*;
 import model.entity.Project;
 
 
-
+import javax.persistence.*;
 import java.util.HashSet;
 import java.util.Set;
 
