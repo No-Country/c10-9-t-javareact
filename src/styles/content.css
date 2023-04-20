@@ -1,0 +1,82 @@
+
+  .content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 70vh;
+    text-align: center;
+    flex-direction: column;
+  }
+
+  .title {
+    font-size: 100px;
+    font-weight: bold;
+    margin-bottom: 10px;
+    color: #6D00E4;
+    margin-top: 20px;
+    position: relative;
+  }
+  .icon{
+    width:70px;
+    height: 70px;
+    position: absolute;
+    top:20px
+  }
+  .icon-left {
+    left: -100px; /* Position the left icon on the left side of the title element */
+  }
+  
+  .icon-right {
+    right: -100px; /* Position the right icon on the right side of the title element */
+  }
+ 
+  .subtitle {
+    font-size: 16px;
+    margin-bottom: 20px;
+    color: #1C1D21;
+  }
+
+  .buttons-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+  }
+  
+  .button-container {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+
+  .content-button1 {
+    background-color: #fff;
+    color: #6D00E4;
+    border: 1px solid #6D00E4;
+    border-radius: 20px;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: bold;
+    margin: 0 10px;
+    padding: 10px 20px;
+  }
+  .content-button2 {
+    background-color: #6D00Ef;
+    color: #fff;
+    border: none;
+    border-radius: 20px;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: bold;
+    margin: 0 10px;
+    padding: 10px 20px;
+  }
+  .icon-left1 {
+    margin-left: -300px;
+    margin-top: -50px; /* Position the left icon on the left side of the title element */
+  }
+  
+  .icon-right1 {
+    margin-right: -300px;
+    margin-top: -50px; /* Position the right icon on the right side of the title element */
+  }
