@@ -67,7 +67,7 @@ function Login () {
               appId='753453626406808'
               onResolve={(response) => {
                 console.log(response)
-                navigate('/home')
+                navigate('/dashboard')
               }}
               onReject={(error) => {
                 console.log(error)
@@ -81,7 +81,7 @@ function Login () {
               access_type='offline'
               onResolve={({ provider, data }) => {
                 console.log(provider, data)
-                navigate('/home')
+                navigate('/dashboard')
               }}
               onReject={(err) => {
                 console.log(err)

@@ -1,13 +1,13 @@
 import React, { useState } from 'react'
 import DashboardButton from '../buttons/DashboardButton'
-import ProjectButton from '../buttons/ProjectButton'
 import SearchStack from '../components/SearchStack'
+import CardProject from '../components/CardProject'
 import '../styles/CardDashboard.css'
 
 function CardDashboard () {
   const [showFirstFeature, setShowFirstFeature] = useState(true)
-  const [showSecondFeature, setShowSecondFeature] = useState(false)
   const [showSearchStack, setShowSearchStack] = useState(true)
+  const [showCardProject, setShowCardProject] = useState(false)
   const [activeButton, setActiveButton] = useState('dashboard')
 
   const handleButtonClick = (buttonName) => {
@@ -16,15 +16,15 @@ function CardDashboard () {
 
   const handleClickFirstFeature = () => {
     setShowFirstFeature(true)
-    setShowSecondFeature(false)
     handleButtonClick('dashboard')
     setShowSearchStack(true)
+    setShowCardProject(false)
   }
 
   const handleClickSecondFeature = () => {
     setShowFirstFeature(false)
-    setShowSecondFeature(true)
     setShowSearchStack(false)
+    setShowCardProject(true)
     handleButtonClick('project')
   }
 
@@ -43,9 +43,9 @@ function CardDashboard () {
         Proyectos
       </button>
       {showFirstFeature && <DashboardButton />}
-      {showSecondFeature && <ProjectButton />}
       {showSearchStack && <SearchStack />}
       <p className='title58'>Colaboracion mas cerca de ti </p>
+      {showCardProject && <CardProject />}
     </div>
   )
 }
