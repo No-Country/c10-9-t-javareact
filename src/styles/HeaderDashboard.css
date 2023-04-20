@@ -1,0 +1,107 @@
+nav {
+    display: flex;
+    justify-content: space-between;
+    padding: 0 24px;;
+    position: fixed;
+    width: 97%;
+    height: 60px;
+    top: 0;
+    background-color: white;
+    /* overflow: visible; */
+}
+img {
+    width: 50px;
+    height: 50px;
+
+}
+.menu{
+    width:32px;
+    height: 32px;
+}
+
+.nav-logo {
+    width: 169px;
+    height: 70px;
+}
+.navbar-left ,
+.navbar-right {
+    list-style: none;
+    padding: 0;
+    margin: 0px;
+    display: flex;
+    align-items: center;
+    height: 60px;
+    gap:16px
+}
+
+.navbar-left {
+    display: flex;
+
+}
+
+.navbar-left  {
+    margin-left: 80px;
+}
+
+.navbar-left ,
+.navbar-right  {
+    text-decoration: none;
+    color: var(--very-light-pink);
+    border: 1px solid var(--white);
+    padding: 8px;
+    border-radius: 8px;
+
+}
+.navbar-right{
+    margin-right: 80px
+}
+
+.Quienes-somos{
+  background-color: #6D00E4;
+  border-radius: 20px;
+  border: none;
+  color: white;
+  cursor: pointer;
+  font-size: 16px;
+  font-weight: bold;
+  height: 30px;
+  width: 150px;
+}
+@media screen and (max-width: 768px) {
+    /* Hide the logo on small screens */
+    .navbar-left {
+     margin-left: 0;
+     width: 100%;
+    }
+    
+    /* Adjust margin for the right-side components */
+    .navbar-right {
+      margin-right: 40px;
+      gap: 5px;
+    }
+    
+    /* Increase size of menu icon on small screens */
+    .menu {
+      width: 40px;
+      height: 40px;
+    }
+    
+    /* Adjust font size of "Quienes somos" button */
+    .Quienes-somos {
+      font-size: 14px;
+    }
+  }
+  
+  @media screen and (max-width: 576px) {
+    /* Adjust padding for the navigation bar */
+    nav {
+      padding: 0;
+    }
+    
+    /* Adjust font size and height of the "Quienes somos" button */
+    .Quienes-somos {
+      font-size: 12px;
+      height: 25px;
+    }
+  }
+

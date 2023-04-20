@@ -1,5 +1,9 @@
 import React, { useState } from 'react'
 import { useNavigate } from 'react-router-dom'
+import { LoginSocialGoogle, LoginSocialFacebook } from 'reactjs-social-login'
+import facebook from '../assets/logos/Facebook.png'
+import google from '../assets/logos/Google.png'
+import educfly from '../assets/logos/biggerlogo.png'
 import '../styles/CreateAccount.css'
 
 function CreateAccount () {
@@ -51,43 +55,34 @@ function CreateAccount () {
   return (
     <div className='CreateAccount'>
       <div className='CreateAccount-container'>
-        <h1 className='Title'>my account</h1>
-        <form action='/' className='form' onSubmit={handleSubmit}>
-          <div>
-            <label htmlFor='name' className='label'>
-              Name
-            </label>
+        <form action='/' className='form3' onSubmit={handleSubmit}>
+          <h1 className='Create-account-title'>Create account</h1>
+          <div className='form-div'>
             <input
               type='text'
               id='name'
               value={name}
               onChange={handleNameChange}
-              placeholder='Ever'
-              className='input input-name'
+              placeholder='Name'
+              className='input3 input-name'
               required
             />
-            <label htmlFor='email' className='label'>
-              Email
-            </label>
             <input
               type='email'
               id='email'
               value={email}
               onChange={handleEmailChange}
-              placeholder='everjose@example.com'
-              className='input input-email'
+              placeholder='email'
+              className='input3 input-email'
               required
             />
-            <label htmlFor='password' className='label'>
-              Password
-            </label>
             <input
               type='password'
               id='password'
               value={password}
               onChange={handlePasswordChange}
-              placeholder='*********'
-              className='input input-password'
+              placeholder='password'
+              className='input3 input-password'
               required
             />
             {errorMessage && <p>{errorMessage}</p>}
@@ -95,14 +90,43 @@ function CreateAccount () {
           <input
             type='submit'
             value={isCreatingAccount ? 'Creating...' : 'Create'}
-            className='first-button login-button'
+            className='first-button5 login-button5'
             disabled={isCreatingAccount}
           />
+          <div className='social-media'>
+            <LoginSocialFacebook
+              appId='753453626406808'
+              onResolve={(response) => {
+                console.log(response)
+                navigate('/home')
+              }}
+              onReject={(error) => {
+                console.log(error)
+              }}
+            >
+              <img src={facebook} alt='facebook' className='facebook' />
+            </LoginSocialFacebook>
+            <LoginSocialGoogle
+              client_id='146280076649-qqmupnisscb3pketa3646h84cdca2g54.apps.googleusercontent.com'
+              discoveryDocs='claims supported'
+              access_type='offline'
+              onResolve={({ provider, data }) => {
+                console.log(provider, data)
+                navigate('/home')
+              }}
+              onReject={(err) => {
+                console.log(err)
+              }}
+            >
+              <img src={google} alt='google' className='google' />
+            </LoginSocialGoogle>
+          </div>
         </form>
 
         {errorMessage && (
           <p>{errorMessage}</p>
         )}
+        <img src={educfly} alt='logo' className='edufly' />
       </div>
 
     </div>
