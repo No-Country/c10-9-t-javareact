@@ -1,0 +1,231 @@
+.card-container {
+    display: flex;
+    justify-content: center;
+    width: 97%;
+    height:300px;
+    /* margin: 0 72px 0 0px; */
+  }
+  
+  .card {
+    width:23%;
+    height: 300px;
+    margin: 0 28px;
+    display: flex;
+    flex-direction: column;
+    box-sizing: border-box;
+    border: 0.6px solid rgba(109, 0, 228, 0.25);
+    border-radius: 10px;
+  }
+.content15 {
+  display: flex;
+  width: 80%;
+  height: 25%;
+  flex-direction: row;
+  align-items: flex-start;
+  margin: 8px 40px 8px 10px;
+} 
+.green-button{
+  position: absolute;
+  width: 73px;
+  height: 24px;
+  left: 130px;
+  top: 15px;
+  background: #70C504;
+  border-radius: 40px;
+  border: 1px solid #70C504;
+  font-family: 'Poppins';
+  font-style: normal;
+  font-weight: 600;
+  font-size: 12px;
+  line-height: 18px;
+  color: #FFFFFF;
+}
+.Card-information {
+display: flex;
+flex-direction: column;
+align-items: flex-start;
+padding: 0px;
+gap: 8px;
+width: 130px;
+height: 51px;
+margin-top: 5px;
+}
+.Ever{
+  box-shadow: 0px 0px 14px rgba(0, 0, 0, 0.25);
+  border-radius: 50%;
+  margin-right: 8px;
+  width: 80px;
+  height: 80px;
+}
+.name15{
+width: 130px;
+height: 16px;
+font-family: 'Poppins';
+font-style: normal;
+font-weight: 700;
+font-size: 22px;
+line-height: 33px;
+color: #5F5F5F;
+margin:0
+}
+.subtitle15{
+width: 130px;
+height: 11px;
+font-family: 'Poppins';
+font-style: normal;
+font-weight: 500;
+font-size: 16px;
+line-height: 24px;
+color: #6D00E4;
+margin:0
+}
+.profile15{
+  text-decoration: underline;
+  width: 53px;
+  height: 8px;
+  font-family: 'Poppins';
+  font-style: normal;
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 18px;
+  color: #F96900;
+  cursor: pointer;
+}
+.BookmarkSimple{
+  width:32px;
+  height: 32px;
+}
+.card-container2{
+background-color: #f2f2f2;
+filter: drop-shadow(0px 0px 14px rgba(0, 0, 0, 0.3));
+height: 75%;
+border-radius: 10px;
+}
+.content16{
+  margin: 17px;
+}
+.title20{
+  font-family: 'Poppins';
+  font-style: normal;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 24px;
+  margin: 0;
+  width: 112px;
+  height: 11px;
+  color: #6D00E4;
+}
+.text20{
+  margin: 17px 0 0 0;
+  width: 305px;
+  height: 65px;
+  font-family: 'Poppins';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 18px;
+  color: #696969;
+}
+.subtitle20{
+  width: 125px;
+  height: 26px;
+  font-family: 'Poppins';
+  font-style: normal;
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 18px;
+  color: #6D00E4;
+  margin: 10px 0 0 0 
+}
+.button-container20{
+  margin-top: 17px;
+  display: flex;
+  justify-content: space-between;
+}
+.Orange-button {
+  width: 60px;
+  height: 28px;
+  background: #F96900;
+  border-radius: 20px;
+  border: 1px solid #F96900;
+  color: #FFFFFF;
+  font-family: 'Poppins';
+  font-style: normal;
+  font-weight: 600;
+  font-size: 12px;
+  line-height: 18px;
+}
+.Purple-button{
+  width: 108px;
+  height: 27px;
+  background: #6D00E4;
+  border-radius: 40px;
+  border: 1px solid #6D00E4;
+  font-family: 'Poppins';
+  font-style: normal;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 24px;
+  color: #FFFFFF;
+}
+/* For devices with a screen size less than or equal to 768px */
+@media (max-width: 768px) {
+  .card-container {
+    flex-wrap: wrap;
+  }
+  .card {
+    width: 45%;
+    margin: 0 10px 20px;
+  }
+  .content15 {
+    width: 60%;
+    margin: 8px 10px;
+  }
+  .green-button {
+    top: 10px;
+    left: 110px;
+    
+  }
+  .Card-information {
+    width: 100%;
+    margin-top: 10px;
+  }
+  .Ever {
+    margin-right: 10px;
+  }
+  .name15 {
+    font-size: 18px;
+  }
+  .subtitle15 {
+    font-size: 14px;
+  }
+  .profile15 {
+    font-size: 10px;
+  }
+  .content16 {
+    margin: 10px;
+  }
+  .title20 {
+    width: 100%;
+    font-size: 14px;
+  }
+  .text20 {
+    width: 100%;
+    margin: 20px 0;
+    font-size: 10px;
+  }
+  .subtitle20 {
+    width: 100%;
+    margin: 10px 0;
+  }
+  .BookmarkSimple {
+    margin-left: -40px;
+    width: 24px;
+    height: 24px;
+  }
+  
+  .button-container20 {
+    flex-direction: space-between;
+  }
+  
+}

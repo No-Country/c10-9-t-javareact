@@ -1,4 +1,4 @@
-import Header from '../components/Header'
+import Header from '../Headers/HeaderHome'
 import Content from '../components/Content'
 
 function Home () {

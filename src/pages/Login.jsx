@@ -1,12 +1,16 @@
 import React, { useState } from 'react'
-import { Link } from 'react-router-dom'
+import { Link, useNavigate } from 'react-router-dom'
 import '../styles/Login.css'
-// import logo from '@logos/logo_yard_sale.svg'
+import { LoginSocialGoogle, LoginSocialFacebook } from 'reactjs-social-login'
+import facebook from '../assets/logos/Facebook.png'
+import google from '../assets/logos/Google.png'
+import logo from '../assets/logos/biggerlogo.png'
 
 function Login () {
   const [email, setEmail] = useState('')
   const [password, setPassword] = useState('')
   const [errorMessage, setErrorMessage] = useState('')
+  const navigate = useNavigate()
 
   const handleEmailChange = (e) => {
     setEmail(e.target.value)
@@ -30,42 +34,66 @@ function Login () {
   return (
     <div className='Login'>
       <div className='Login-container'>
-        {/* <img src={logo} alt='logo' className='logo' /> */}
-        <form action='/' className='form' onSubmit={handleSubmit}>
-          <label htmlFor='Email' className='label'>Email address</label>
+        <img src={logo} alt='logo' className='edufly' />
+        <form action='/' className='form2' onSubmit={handleSubmit}>
+          <h1 className='Sign-in'>Sign in</h1>
           <input
             type='Text'
             name='email'
             value={email}
             onChange={handleEmailChange}
-            placeholder='ever@example.com'
-            className='input input-email'
+            placeholder='email'
+            className='input1 input-email'
             required
           />
-          <label htmlFor='Password' className='label'>Password</label>
           <input
             type='Password'
             name='password'
             value={password}
             onChange={handlePasswordChange}
-            placeholder='*********'
-            className='input input-password'
+            placeholder='password'
+            className='input1 input-password'
           />
           <Link
             to='/home'
             className='log-in1 login-button1'
-          >Log in
+          >Continue
           </Link>
           {errorMessage && (
             <p className='error-message'>{errorMessage}</p> // Display error message
           )}
+          <div className='social-media'>
+            <LoginSocialFacebook
+              appId='753453626406808'
+              onResolve={(response) => {
+                console.log(response)
+                navigate('/home')
+              }}
+              onReject={(error) => {
+                console.log(error)
+              }}
+            >
+              <img src={facebook} alt='facebook' className='facebook' />
+            </LoginSocialFacebook>
+            <LoginSocialGoogle
+              client_id='146280076649-qqmupnisscb3pketa3646h84cdca2g54.apps.googleusercontent.com'
+              discoveryDocs='claims supported'
+              access_type='offline'
+              onResolve={({ provider, data }) => {
+                console.log(provider, data)
+                navigate('/home')
+              }}
+              onReject={(err) => {
+                console.log(err)
+              }}
+            >
+              <img src={google} alt='google' className='google' />
+            </LoginSocialGoogle>
+          </div>
           <Link to='/passwordrecovery' className='forgot-password'>
-            forgot my password
+            have you forgotten your password?
           </Link>
         </form>
-        <Link to='/createaccount' className='secundary-button signup-button'>
-          Sign up
-        </Link>
       </div>
     </div>
   )
