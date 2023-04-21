@@ -2,7 +2,7 @@ import logo from '../assets/logos/Logo.png'
 import '../styles/Header.css'
 import { Link } from 'react-router-dom'
 
-function Header () {
+function HeaderHome () {
   return (
     <nav>
       <img src={logo} alt='logo' className='nav-logo' />
@@ -18,4 +18,4 @@ function Header () {
   )
 }
 
-export default Header
+export default HeaderHome
