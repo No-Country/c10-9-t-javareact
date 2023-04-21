@@ -55,7 +55,7 @@ function Login () {
             className='input1 input-password'
           />
           <Link
-            to='/home'
+            to='/dashboard'
             className='log-in1 login-button1'
           >Continue
           </Link>

@@ -1,0 +1,24 @@
+.content50{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    flex-direction: column;
+    margin-top: 50px;
+}
+.imageplataform{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.projectimage{
+    display: flex;
+    justify-content: space-between;
+    gap:70px
+}
+
+.conectar{
+    width:300px;
+    height:300px
+}
