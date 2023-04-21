@@ -7,6 +7,7 @@ import NewPassword from '../pages/NewPassword'
 import Form from '../pages/Form'
 import Home from '../pages/Home'
 import Dashboard from '../pages/Dashboard'
+import QuienesSomos from '../pages/QuienesSomos'
 function App () {
   return (
     <>
@@ -18,6 +19,7 @@ function App () {
         <Route path='/form' element={<Form />} />
         <Route path='/home' element={<Home />} />
         <Route path='/dashboard' element={<Dashboard />} />
+        <Route path='/quienessomos' element={<QuienesSomos />} />
       </Routes>
     </>
   )
