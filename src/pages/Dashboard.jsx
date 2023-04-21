@@ -1,7 +1,7 @@
 import Header from '../Headers/HeaderDashboard'
 import CardDashboard from '../components/CardDashboard'
 
-function HeaderDashboard () {
+function Dashboard () {
   return (
     <>
       <Header />
@@ -10,4 +10,4 @@ function HeaderDashboard () {
   )
 }
 
-export default HeaderDashboard
+export default Dashboard
