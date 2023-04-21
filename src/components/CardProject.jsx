@@ -11,7 +11,7 @@ function CardProject () {
           <img src={foto1} alt='ever' className='Ever' />
           <div className='Card-information'>
             <h1 className='name15'>Sofia Perez</h1>
-            <p className='subtitle15'>Backend developer</p>
+            <p className='subtitle15'>Backend Developer</p>
             <a className='profile15'>ver perfil</a>
           </div>
           <img src={logo} alt='logo' className='BookmarkSimple' />
